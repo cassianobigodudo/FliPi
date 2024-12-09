@@ -6,7 +6,31 @@ import { GlobalContext } from '../contexts/GlobalContext'
 
 function TelaPrincipal() {
     
-    const {posicaoUsuario}=useContext(GlobalContext)
+    const {posicaoUsuario, setPosicaoUsuario, vetorObjetosUsuarios, usuarioLogado}=useContext(GlobalContext)
+
+    useEffect (() => {
+        console.log(vetorObjetosUsuarios)
+
+        if(usuarioLogado == false){
+    
+            for(let i = 0; i < vetorObjetosUsuarios.length; i++){
+    
+                if (vetorObjetosUsuarios[i].usuario_id == posicaoUsuario){
+        
+                //   alert(`usuário encontrado com o id ${vetorObjetosUsuarios[i].usuario_id}`)
+                  setPosicaoUsuario(vetorObjetosUsuarios[i].usuario_id)
+        
+                }
+              }
+        }
+    
+      }, [])
+
+      useEffect (() => {
+
+        console.log(posicaoUsuario)
+
+      }, [posicaoUsuario])
 
 
   return (

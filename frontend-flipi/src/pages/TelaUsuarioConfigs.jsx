@@ -28,6 +28,7 @@ function TelaUsuarioConfigs() {
 
     alert('Até mais!')
     setUsuarioLogado(false)
+    setPosicaoUsuario(null)
     navigate('/landingpage')
 
   }

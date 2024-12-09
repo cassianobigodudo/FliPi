@@ -15,14 +15,14 @@ export default function TelaCadastro() {
     const {vetorObjetosUsuarios, setVetorObjetosUsuarios, usuarioLogado, setUsuarioLogado, posicaoUsuario, setPosicaoUsuario} = useContext(GlobalContext)
 
     function verificarUsuarioExistente() {
-        setPosicaoUsuario(0)
+        // setPosicaoUsuario(0)
         for (let i = 0; i < vetorObjetosUsuarios.length; i++) {
             
             if (inputEmail == vetorObjetosUsuarios[i].usuario_email || inputNomeUsuario == vetorObjetosUsuarios[i].usuario_apelido) {
                 return true
             }else{
 
-                setPosicaoUsuario(i+1)
+                // setPosicaoUsuario(i+1)
 
             }
         }
@@ -44,6 +44,22 @@ export default function TelaCadastro() {
         
     }
 
+    useEffect(() => {
+        // Função para buscar os dados dos usuários no backend
+        const fetchUsuarios = async () => {
+            try {
+                // Faz a requisição para o backend
+                const response = await axios.get('http://localhost:3000/usuario');
+                // Armazena os dados recebidos no vetor
+                setVetorObjetosUsuarios(response.data);
+            } catch (error) {
+                console.error('Erro ao buscar usuários:', error);
+            }
+        };
+
+        fetchUsuarios(); // Chama a função ao montar o componente
+    }, []); // O array vazio significa que isso só vai rodar uma vez, na montagem inicial do componente
+
     const verificarCadastro = async (e) => {
 
         e.preventDefault()
@@ -58,12 +74,12 @@ export default function TelaCadastro() {
         } else {
 
             let novoUsuario = {
+                usuario_id: '',
                 usuario_nome: inputNomeCompleto,
                 usuario_apelido: inputNomeUsuario,
                 usuario_email: inputEmail,
                 usuario_senha: inputSenha
             }
-            setVetorObjetosUsuarios([...vetorObjetosUsuarios, novoUsuario])
             console.log(novoUsuario)
 
             setUsuarioLogado(true)
@@ -72,19 +88,52 @@ export default function TelaCadastro() {
             console.log('vou tentar entrar no try')
             try { 
                     // Utilizando o axios para enviar requisição de post do front para o back
-                    console.log('entrei no try')
-                    const response = await axios.post('http://localhost:3000/usuario', novoUsuario)
-                    console.log('tentando receber status 201')
+                    // console.log('entrei no try')
+                    // const response = await axios.post('http://localhost:3000/usuario', novoUsuario)
+                    // console.log('tentando receber status 201')
+                    // if (response.status === 201) {
+                    //     console.log('entrei no status')
+                        // setVetorObjetosUsuarios(response.data);
+                    //     alert('Usuário cadastrado no banco de dados! :D')
+                    // }
+
+                    const response = await axios.post('http://localhost:3000/usuario', novoUsuario);
+        
                     if (response.status === 201) {
-                        console.log('entrei no status')
-                        setVetorObjetosUsuarios(response.data);
-                        alert('Usuário cadastrado no banco de dados! :D')
+                        // Atualiza o objeto com o ID retornado pelo backend
+                        novoUsuario.usuario_id = response.data.usuario_id;
+        
+                        // Adiciona o usuário ao vetor
+                        setVetorObjetosUsuarios([...vetorObjetosUsuarios, novoUsuario])
+        
+                        // Define o estado de login como verdadeiro
+                        setUsuarioLogado(true);
+        
+                        alert("Usuário cadastrado com sucesso!");
+
+                        setPosicaoUsuario(novoUsuario.usuario_id)
+                        navigate("/telaprincipal");
                     }
                     
                 } catch (error) {
                     console.error('Erro ao cadastrar usuário! :(', error)
                 }
-                navigate("/telaprincipal")
+
+                
+                    // Envia os dados para o backend
+                    
+
+                // const fetchClienteById = async (id) => {
+                //     try {
+                //         const response = await axios.get(`http://localhost:3000/clientes/${id}`);
+                //         setSelectedCliente(response.data); // Seleciona o cliente para edição
+                //         setForm(response.data); // Preenche o formulário com os dados do cliente
+                //     } catch (error) {
+                //         console.error('Erro ao buscar cliente por ID:', error);
+                //     }
+                // };
+
+                
             }
         }
 

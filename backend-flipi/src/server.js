@@ -9,7 +9,7 @@ const pool = new Pool({
     user: 'postgres', // Substitua pelo seu usuário do PostgreSQL / PGAdmin
     host: 'localhost',
     database: 'FlipiDB', // Nome da sua database no PostgreSQL / PGAdmin
-    password: 'senai', // Substitua pela sua senha do PostgreSQL / PGAdmin
+    password: 'SENAI', // Substitua pela sua senha do PostgreSQL / PGAdmin
     port: 5432, // Porta padrão do PostgreSQL
 })
 
