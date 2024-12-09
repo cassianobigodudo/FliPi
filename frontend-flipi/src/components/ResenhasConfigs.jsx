@@ -44,7 +44,8 @@ function ResenhasConfigs() {
                     <textarea className='textarea-resenha' 
                     cols="30" 
                     rows="10"
-                    maxLength={800}>"O Eco do Silêncio" é um drama psicológico sobre Sofia, que retorna à sua cidade natal para enfrentar um trauma de infância. A obra explora relações complexas e os silêncios que revelam emoções profundas. Com personagens bem desenvolvidos, é uma leitura introspectiva e emocional, focada na reflexão sobre o ser humano.</textarea>
+                    maxLength={800}
+                    defaultValue={'"O Eco do Silêncio" é um drama psicológico sobre Sofia, que retorna à sua cidade natal para enfrentar um trauma de infância. A obra explora relações complexas e os silêncios que revelam emoções profundas. Com personagens bem desenvolvidos, é uma leitura introspectiva e emocional, focada na reflexão sobre o ser humano.'}></textarea>
 
                 </div>
 

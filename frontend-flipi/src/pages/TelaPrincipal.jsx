@@ -6,19 +6,22 @@ import { GlobalContext } from '../contexts/GlobalContext'
 
 function TelaPrincipal() {
     
-    const {posicaoUsuario, setPosicaoUsuario, vetorObjetosUsuarios, usuarioLogado}=useContext(GlobalContext)
+    const {posicaoUsuarioID, setPosicaoUsuarioID, vetorObjetosUsuarios, usuarioLogado, dadosUsuarioLogado, setDadosUsuarioLogado}=useContext(GlobalContext)
 
     useEffect (() => {
         console.log(vetorObjetosUsuarios)
 
-        if(usuarioLogado == false){
+        if(usuarioLogado == true){
     
             for(let i = 0; i < vetorObjetosUsuarios.length; i++){
     
-                if (vetorObjetosUsuarios[i].usuario_id == posicaoUsuario){
+                if (vetorObjetosUsuarios[i].usuario_id == posicaoUsuarioID){
         
                 //   alert(`usuário encontrado com o id ${vetorObjetosUsuarios[i].usuario_id}`)
-                  setPosicaoUsuario(vetorObjetosUsuarios[i].usuario_id)
+                  setPosicaoUsuarioID(vetorObjetosUsuarios[i].usuario_id)
+                //   setDadosUsuarioLogado(vetorObjetosUsuarios.filter((u) => u.usuario_id == posicaoUsuarioID))
+                  let ul = vetorObjetosUsuarios.filter((u) => u.usuario_id == posicaoUsuarioID)
+                  setDadosUsuarioLogado(ul[0])
         
                 }
               }
@@ -28,9 +31,15 @@ function TelaPrincipal() {
 
       useEffect (() => {
 
-        console.log(posicaoUsuario)
+        console.log(posicaoUsuarioID)
 
-      }, [posicaoUsuario])
+      }, [posicaoUsuarioID])
+
+      useEffect (() => {
+
+        console.log(dadosUsuarioLogado)
+
+      }, [dadosUsuarioLogado])
 
 
   return (
@@ -240,7 +249,7 @@ function TelaPrincipal() {
                             <div className="div-label-next-page">
                              
                                 
-                                <button className='btn-next-page' onClick={() => {console.log(posicaoUsuario)}}>Next Page</button>
+                                <button className='btn-next-page' onClick={() => {console.log(posicaoUsuarioID)}}>Next Page</button>
 
                             </div>
 

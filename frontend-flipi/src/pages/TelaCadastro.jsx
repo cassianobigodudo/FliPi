@@ -12,7 +12,7 @@ export default function TelaCadastro() {
     const [inputEmail, setInputEmail] = useState('')
     const [inputSenha, setInputSenha] = useState('')
     const navigate = useNavigate()
-    const {vetorObjetosUsuarios, setVetorObjetosUsuarios, usuarioLogado, setUsuarioLogado, posicaoUsuario, setPosicaoUsuario} = useContext(GlobalContext)
+    const {vetorObjetosUsuarios, setVetorObjetosUsuarios, usuarioLogado, setUsuarioLogado, posicaoUsuarioID,  setPosicaoUsuarioID} = useContext(GlobalContext)
 
     function verificarUsuarioExistente() {
         // setPosicaoUsuario(0)
@@ -49,16 +49,16 @@ export default function TelaCadastro() {
         const fetchUsuarios = async () => {
             try {
                 // Faz a requisição para o backend
-                const response = await axios.get('http://localhost:3000/usuario');
+                const response = await axios.get('http://localhost:3000/usuario')
                 // Armazena os dados recebidos no vetor
-                setVetorObjetosUsuarios(response.data);
+                setVetorObjetosUsuarios(response.data)
             } catch (error) {
-                console.error('Erro ao buscar usuários:', error);
+                console.error('Erro ao buscar usuários:', error)
             }
         };
 
-        fetchUsuarios(); // Chama a função ao montar o componente
-    }, []); // O array vazio significa que isso só vai rodar uma vez, na montagem inicial do componente
+        fetchUsuarios() // Chama a função ao montar o componente
+    }, []) // O array vazio significa que isso só vai rodar uma vez, na montagem inicial do componente
 
     const verificarCadastro = async (e) => {
 
@@ -82,7 +82,7 @@ export default function TelaCadastro() {
             }
             console.log(novoUsuario)
 
-            setUsuarioLogado(true)
+            
             // lol()
             alert('Usuário registrado com sucesso =)')
             console.log('vou tentar entrar no try')
@@ -101,17 +101,20 @@ export default function TelaCadastro() {
         
                     if (response.status === 201) {
                         // Atualiza o objeto com o ID retornado pelo backend
+                        console.log('respondi com 201')
                         novoUsuario.usuario_id = response.data.usuario_id;
-        
+                        console.log('recebi o id do novo usuario ' , novoUsuario.usuario_id)
                         // Adiciona o usuário ao vetor
                         setVetorObjetosUsuarios([...vetorObjetosUsuarios, novoUsuario])
+                        console.log('coloquei o usuario dentro do vetor ', vetorObjetosUsuarios) 
         
                         // Define o estado de login como verdadeiro
                         setUsuarioLogado(true);
+                        console.log('usuario ta verdadeiro ' ,  usuarioLogado)
         
                         alert("Usuário cadastrado com sucesso!");
 
-                        setPosicaoUsuario(novoUsuario.usuario_id)
+                        setPosicaoUsuarioID(novoUsuario.usuario_id)
                         navigate("/telaprincipal");
                     }
                     
@@ -153,7 +156,7 @@ export default function TelaCadastro() {
       }, [])
 
     function lol(){
-        console.log(posicaoUsuario)
+        console.log(posicaoUsuarioID)
     }
     return (
 

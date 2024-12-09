@@ -3,15 +3,16 @@ import "./TelaLogin.css"
 import { Link, useNavigate } from "react-router-dom"
 import{ GlobalContext } from '../contexts/GlobalContext'
 import { useContext } from 'react'
+import axios from 'axios'
 useState
 
 function TelaLogin() {
     let variavel
     
-    const [inputNomeUsuario, setInputNomeUsuario] = useState()
-    const [inputSenha, setInputSenha] = useState()
+    const [inputNomeUsuario, setInputNomeUsuario] = useState('')
+    const [inputSenha, setInputSenha] = useState('')
     const navigate = useNavigate()
-    const {vetorObjetosUsuarios, usuarioLogado, setUsuarioLogado, posicaoUsuario, setPosicaoUsuario} = useContext(GlobalContext)
+    const {vetorObjetosUsuarios, usuarioLogado, setUsuarioLogado, posicaoUsuarioID, setPosicaoUsuarioID, setVetorObjetosUsuarios} = useContext(GlobalContext)
 
 
     useEffect (() => {
@@ -21,8 +22,25 @@ function TelaLogin() {
           alert('Há um usuário já logado, por favor, deslogue nas configurações de usuário primeiro')
           navigate('/telaprincipal')
         }
+
+        const fetchUsuarios = async () => {
+            try {
+                // Faz a requisição para o backend
+                const response = await axios.get('http://localhost:3000/usuario')
+                // Armazena os dados recebidos no vetor
+                setVetorObjetosUsuarios(response.data)
+            } catch (error) {
+                console.error('Erro ao buscar usuários:', error)
+            }
+        };
+
+        fetchUsuarios() // Chama a função ao montar o componente
     
       }, [])
+
+      useEffect(() => {
+        console.log(vetorObjetosUsuarios)
+    }, [vetorObjetosUsuarios])
       
 
 
@@ -48,7 +66,6 @@ function TelaLogin() {
                 
                 //!resolver a posicao do usuario no login
                 variavel = i
-                setPosicaoUsuario(i)
                 // console.log('oi eu passei aqui')
                 return false
             }
@@ -71,8 +88,8 @@ function TelaLogin() {
     }
 
 
-    function verificarLogin(){
-
+    const verificarLogin = async (e) => {
+        e.preventDefault()
         switch (true){
 
             case verificarInputsRegistrados():
@@ -85,9 +102,9 @@ function TelaLogin() {
                 alert('Login Incorreto.')
                 break;
             default:
+                setPosicaoUsuarioID(vetorObjetosUsuarios[variavel].usuario_id)
                 alert('Login feito com sucesso!')
                 setUsuarioLogado(true)
-                
                 navigate("/telaprincipal")
 
         }
