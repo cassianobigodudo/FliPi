@@ -3,6 +3,8 @@ import "./TelaEscrivaninha.css"
 import EstrelasBtn from '../components/EstrelasBtn'
 import NavbarVertical from '../components/NavbarVertical'
 import { GlobalContext } from '../contexts/GlobalContext'
+import { useNavigate } from 'react-router-dom'
+
 
 
 
@@ -27,10 +29,34 @@ function TelaEscrivaninha() {
   
   const {biblioteca, livroAcessado, setLivroAcessado} = useContext(GlobalContext)
 
-
+  //passando o valor do textarea para o usestate
   const [resenha, setResenha] = useState('')
 
+  function verificarCampoResenha(){
+
+    if (resenha == ''){
+
+      return true
+    }
+    return false
+
+  }
+
   function cadastrarResenha(){
+
+    // livroAcessado.resenhasLivro.nomeUsuario = usuarioLogado
+    // livroAcessado.resenhasLivro.resenhaUsuario = resenha
+
+    switch (true){
+
+      case verificarCampoResenha():
+        alert('Insira algum texto dentro da resenha!')
+        break
+
+    }
+
+    alert(`Usuário: ${usuarioLogado}\n Resenha: ${resenha}`)
+
 
   }
 
