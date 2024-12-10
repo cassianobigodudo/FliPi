@@ -24,6 +24,7 @@
         background-color: #ffeddf;
         border-radius: 15px;
         margin-bottom: 1%;
+        gap: 10px;
     }
         .box-resenha{
             display: flex;
@@ -31,10 +32,25 @@
             align-items: center;
             flex-direction: column;
             height: fit-content;
-            background-color: #fff;
+            background-color: #ffeddf;
             margin: 2% 5% 4% 5%;
             border-radius: 10px;
+            gap: 40px;
         }
+
+        .box-resenha-vazio{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: fit-content;
+            min-width: 1000px;
+            background-color: #ffeddf;
+            margin: 2% 5% 4% 5%;
+            border-radius: 10px;
+            gap: 40px;
+        }
+
             .parte-foto-nome{
                 display: flex;
                 justify-content: start;
@@ -77,7 +93,7 @@
                 height: 200px;
             }
                 .texto-resenha{
-                    font-size: 25px;
+                    font-size: 18px;
                     font-family: "fonte-projeto";
                 }
 

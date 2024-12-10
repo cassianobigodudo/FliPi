@@ -95,7 +95,6 @@ function LivroParteUm() {
 
                 <div className="parte-menus">
 
-                    {/* <NavbarVertical />                   */}
                     <button onClick={() => {navigate("/telaprincipal")}} className="botao-menuUm"> <img src="../public/icons/ant-design--home-outlined.svg" alt="" className="icone-botao"/> </button>
                     
                     <button onClick={escrivaninha}  className="botao-menuDois"><img src="public/icons/escrita.png" alt="" className="icone-botao"/> </button>
