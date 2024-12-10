@@ -4,7 +4,8 @@ import { GlobalContext } from '../contexts/GlobalContext'
 
 function LivroParteDois() {
 
-    const {biblioteca, livroAcessado} = useContext(GlobalContext)
+    // const {biblioteca} = useContext(GlobalContext)
+    const {biblioteca, setLivroAcessado} = useContext(GlobalContext);
     
   return (
     <div className="container-mae-resenhas">
@@ -15,30 +16,48 @@ function LivroParteDois() {
 
                 <div className="box-resenha">
 
-                    <div className="parte-foto-nome">
+                    {biblioteca[0].resenhasLivro && biblioteca[0].resenhasLivro.length > 0 ? (
+                        biblioteca[0].resenhasLivro.map((resenha, index) => (
+                            <div key={index} className="resenha-container">
 
-                        <div className="foto-perfil">
+                                {/* Foto e Nome */}
+                                <div className="parte-foto-nome">
 
-                            <img src="./images/perfil.png" alt="" className="imagem-perfil"/>
+                                    <div className="foto-perfil">
 
-                        </div>
+                                        <img src="./images/icone-usuario.png" alt="Foto de perfil" className="imagem-perfil" />
 
-                        <h3>{biblioteca[0].resenhasLivro[0].nomeUsuario}</h3>
+                                    </div>
 
-                    </div>
+                                    <h3>{resenha.nomeUsuario}</h3>
 
-                    <div className="parte-resenha">
+                                </div>
 
-                        <label htmlFor="" className="texto-resenha">{biblioteca[0].resenhasLivro[0].resenhaUsuario}</label>
+                                {/* Texto da Resenha */}
+                                <div className="parte-resenha">
 
-                    </div>
+                                    <label htmlFor="" className="texto-resenha">{resenha.resenhaUsuario}</label>
 
-                    <div className="parte-curtida">
+                                </div>
 
-                        <button className="botao-curtida"><img src="./images/like.svg" alt="" className="icone-curtida"/></button>
-                        <label htmlFor="" className="label-curtidas">X CURTIDAS</label>
+                                {/* Curtidas */}
+                                <div className="parte-curtida">
 
-                    </div>
+                                    <button className="botao-curtida">
+
+                                        <img src="./images/like.svg" alt="Curtir" className="icone-curtida" />
+
+                                    </button>
+
+                                    <label htmlFor="" className="label-curtidas">CURTIDAS</label>
+
+                                </div>
+
+                            </div>
+                        ))
+                    ) : (
+                        <div className="box-resenha-vazio">Nenhuma resenha disponível</div>
+                    )}
 
                 </div>
 

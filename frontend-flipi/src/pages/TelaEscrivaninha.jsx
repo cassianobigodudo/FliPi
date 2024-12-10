@@ -3,9 +3,7 @@ import "./TelaEscrivaninha.css"
 import EstrelasBtn from '../components/EstrelasBtn'
 import NavbarVertical from '../components/NavbarVertical'
 import { GlobalContext } from '../contexts/GlobalContext'
-import { useNavigate } from 'react-router-dom'
-
-
+import {useLocation, useNavigate } from 'react-router-dom'
 
 
 function TelaEscrivaninha() {
@@ -19,23 +17,26 @@ function TelaEscrivaninha() {
     }
 
   }, [])
-
-
+  
+  
+  
+  
   const location = useLocation()
   const navigate = useNavigate()
   const {usuarioLogado} = useContext(GlobalContext)
-
+  
   const {biblioteca, livroAcessado, setLivroAcessado} = useContext(GlobalContext)
+
+  useEffect (() => {
+    console.log(livroAcessado)
+  }, [livroAcessado.resenhasLivro[0].resenhaUsuario])
 
   //passando o valor do textarea para o objeto
   const [resenha, setResenha] = useState('')
 
   function cadastrarResenha(){
 
-    livroAcessado.resenhasLivro.nomeUsuario = usuarioLogado
-    livroAcessado.resenhasLivro.resenhaUsuario = resenha
-
-    alert(`Usuário: ${usuarioLogado}\n Resenha: ${resenha}`)
+    alert(`Resenha cadastrada com sucesso!!!`)
 
   }
 
@@ -49,30 +50,33 @@ function TelaEscrivaninha() {
                   
            <div className="documento-folha">
     
-            <div className="folha-topo">
+              <div className="folha-topo">
 
-              <button className='folha-topo-btn'>
-                <img className='img-lixo-escrivaninha' src="public\images\output-onlinepngtools.png" alt="" /> 
-              </button>
-            
-              <input maxLength={18} className='inpt-tituloResenha' placeholder='TITULO' type="text" />
+                <button className='folha-topo-btn'>
+                  <img className='img-lixo-escrivaninha' src="public\images\output-onlinepngtools.png" alt="" /> 
+                </button>
+              
+                <input maxLength={18} className='inpt-tituloResenha' placeholder='TITULO' type="text" />
 
 
-            </div>
-            <div className="folha-conteudo">
+              </div>
+              
+              <div className="folha-conteudo">
 
-              <textarea placeholder='Começe sua resenha aqui...' maxLength={800} className='inpt-resenha' name="resenha" id="" cols="10" rows="10" 
-              value={resenha}
-              onChange={(event) => setResenha(event.target.value)}
-              ></textarea>
+                <textarea placeholder='Começe sua resenha aqui...' maxLength={800} className='inpt-resenha' name="resenha" id="" cols="10" rows="10" 
+                value={resenha}
+                onChange={(event) => setResenha(event.target.value)}
+                ></textarea>
 
-             
-            </div>
-            <div className="folha-desfecho">
+              
+              </div>
 
-              <label className='lbl-desfecho' htmlFor="">Preview</label>
+              <div className="folha-desfecho">
 
-            </div>
+                <label className='lbl-desfecho' htmlFor="">Preview</label>
+
+              </div>
+
             </div>
         </div>
 
