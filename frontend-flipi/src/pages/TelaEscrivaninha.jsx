@@ -3,7 +3,8 @@ import "./TelaEscrivaninha.css"
 import EstrelasBtn from '../components/EstrelasBtn'
 import NavbarVertical from '../components/NavbarVertical'
 import { GlobalContext } from '../contexts/GlobalContext'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+
 
 
 
@@ -25,19 +26,56 @@ function TelaEscrivaninha() {
   const navigate = useNavigate()
   const {usuarioLogado} = useContext(GlobalContext)
 
-  const {biblioteca, livroAcessado, setLivroAcessado} = useContext(GlobalContext)
+  const {biblioteca, livroAcessado, setLivroAcessado, vetorObjetosUsuarios, posicaoUsuarioID, dadosUsuarioLogado, livro} = useContext(GlobalContext)
 
   //passando o valor do textarea para o usestate
   const [resenha, setResenha] = useState('')
 
-  function cadastrarResenha(){
+  function verificarCampoResenha(){
 
-    livroAcessado.resenhasLivro.nomeUsuario = usuarioLogado
-    livroAcessado.resenhasLivro.resenhaUsuario = resenha
+    if (resenha == ''){
 
-    alert(`Usuário: ${usuarioLogado}\n Resenha: ${resenha}`)
+      return true
+    }
+    return false
 
   }
+
+  function cadastrarResenha() {
+    if (verificarCampoResenha()) {
+        alert('Insira algum texto dentro da resenha!');
+    } else {
+        // Cria a nova resenha
+        const novaResenha = {
+            nomeUsuario: '', // Inicializa vazio; será atualizado abaixo
+            resenhaUsuario: resenha, // Atribui o texto da resenha
+        };
+
+        // Busca o usuário logado pelo ID
+        const usuarioAtualizado = vetorObjetosUsuarios.find(e => e.usuario_id === posicaoUsuarioID);
+
+        if (usuarioAtualizado) {
+            novaResenha.nomeUsuario = usuarioAtualizado.usuario_apelido;
+        } else {
+            console.error('Usuário não encontrado!');
+            return;
+        }
+
+        // Atualiza o estado de `livroAcessado`
+        setLivroAcessado((prevState) => ({
+            ...prevState,
+            resenhasLivro: [...prevState.resenhasLivro, novaResenha], // Adiciona a nova resenha ao array
+        }));
+
+        console.log('Nova resenha adicionada:', novaResenha);
+    }
+
+  }
+  useEffect(() => {
+    
+    console.log(livroAcessado)
+
+  }, [livroAcessado]) 
 
   return (
     

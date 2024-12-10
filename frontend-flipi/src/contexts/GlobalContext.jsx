@@ -24,8 +24,8 @@ const [biblioteca, setBiblioteca] = useState([
         sinopseLivro: 'Dom Casmurro, a obra mais conhecida do escritor Machado de Assis, conta a história de Bentinho e Capitu, que, apaixonados na adolescência, têm que enfrentar um obstáculo à realização de seus anseios amorosos, pois a mãe de Bentinho, D. Glória, fez uma promessa de que seu filho seria padre. Assim, no seminário, Bentinho conhece Escobar, que se torna seu melhor amigo e encontra uma solução para o problema.',
         generoLivro: ['Romance', 'Realista'],
         resenhasLivro: [{
-            nomeUsuario: 'Sou eu',
-            resenhaUsuario: 'ajfdkslajksjkajfkjsakjfksajkajksjkajdsk',
+            nomeUsuario: '',
+            resenhaUsuario: '',
         }],
     },
     {
