@@ -27,7 +27,7 @@ function TelaEscrivaninha() {
 
   const {biblioteca, livroAcessado, setLivroAcessado} = useContext(GlobalContext)
 
-  //passando o valor do textarea para o objeto
+  //passando o valor do textarea para o usestate
   const [resenha, setResenha] = useState('')
 
   function cadastrarResenha(){

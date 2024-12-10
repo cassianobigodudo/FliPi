@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './TelaPrincipal.css'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Navbar from '../components/Navbar'
 import { GlobalContext } from '../contexts/GlobalContext'
 
@@ -8,6 +8,7 @@ function TelaPrincipal() {
     
     const {posicaoUsuarioID, setPosicaoUsuarioID, vetorObjetosUsuarios, usuarioLogado, dadosUsuarioLogado, setDadosUsuarioLogado}=useContext(GlobalContext)
     const {biblioteca}=useContext(GlobalContext)
+    const navigate = useNavigate()
 
 
     useEffect (() => {
