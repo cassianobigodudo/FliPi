@@ -25,8 +25,10 @@ const [biblioteca, setBiblioteca] = useState([
         sinopseLivro: 'Dom Casmurro, a obra mais conhecida do escritor Machado de Assis, conta a história de Bentinho e Capitu, que, apaixonados na adolescência, têm que enfrentar um obstáculo à realização de seus anseios amorosos, pois a mãe de Bentinho, D. Glória, fez uma promessa de que seu filho seria padre. Assim, no seminário, Bentinho conhece Escobar, que se torna seu melhor amigo e encontra uma solução para o problema.',
         generoLivro: ['Romance', 'Realista'],
         resenhasLivro: [{
-            nomeUsuario: 'Edson',
-            resenhaUsuario: 'Escrito por Machado de Assis e publicado em 1899, Dom Casmurro é um dos maiores clássicos da literatura brasileira. A obra, narrada em primeira pessoa por Bento Santiago (o "Dom Casmurro"), revisita sua juventude e o intenso relacionamento com Capitu, sua amiga de infância e grande amor. O livro, repleto de memórias e reflexões, explora temas como amor, ciúme, traição e a fragilidade da memória. A famosa dúvida sobre a fidelidade de Capitu — com seus "olhos de ressaca" enigmáticos — é o ponto central do romance, deixando ao leitor a tarefa de interpretar se ela realmente traiu ou não Bento com seu melhor amigo, Escobar. Com um estilo irônico e psicológico, Machado de Assis constrói uma narrativa atemporal que analisa as complexidades das relações humanas e a subjetividade do narrador. Dom Casmurro é uma obra-prima que transcende gerações, desafiando o leitor a questionar a verdade e os limites da percepção humana.',
+
+            nomeUsuario: '',
+            resenhaUsuario: '',
+
         }],
     },
     {
