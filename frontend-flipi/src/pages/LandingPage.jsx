@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import './LandingPage.css'
 import Navbar from '../components/Navbar'
 import { GlobalContext } from '../contexts/GlobalContext'
@@ -7,7 +7,7 @@ import { GlobalContext } from '../contexts/GlobalContext'
 function LandingPage() {
 
     const navigate = useNavigate()
-    const {biblioteca}=useContext(GlobalContext)
+    const {biblioteca} = useContext(GlobalContext)
 
   return (
 
@@ -82,37 +82,43 @@ function LandingPage() {
                         <div className="div-Fila-livros-landing">
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                   
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 18 } })}>
+                                
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[18].tituloLivro}</p>
+
                                 </button>
+
                             </div>
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                   
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 19 } })}>      
+
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[19].tituloLivro}</p>
                                 </button>
                             </div>
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
+
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 0 } })}>
                                    
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[0].tituloLivro}</p>
+
                                 </button>
+
                             </div>
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                   
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 2 } })}>      
+                        
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[2].tituloLivro}</p>
                                 </button>
                             </div>
@@ -122,37 +128,43 @@ function LandingPage() {
                         <div className="div-Fila-livros-landing">
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                   
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 4 } })}>
+
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[4].tituloLivro}</p>
+
                                 </button>
+
                             </div>
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                  
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 1 } })}>      
+
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[1].tituloLivro}</p>
                                 </button>
                             </div>
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                   
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 6 } })}>
+                                
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[6].tituloLivro}</p>
+
                                 </button>
+
                             </div>
 
                             <div className="div-box-titulo">
-                                <button className="btn-livro-home">
-                                  
-                                  <Link to="/telalivro">
-                                    <div className="box"></div></Link>
+                                <button className="btn-livro-home" onClick={() => 
+                                    navigate("/telalivro", { state: { index: 7 } })}>      
+
+                                    <div className="box"></div>
                                     <p className='titulos-livros'>{biblioteca[7].tituloLivro}</p>
                                 </button>
                             </div>
@@ -160,7 +172,6 @@ function LandingPage() {
                         </div>
 
                         <div className="div-divisoes-direita">
-                            
 
                             <div className="div-divisao-um"></div>
                             <div className="div-divisao-dois"></div>
@@ -171,10 +182,7 @@ function LandingPage() {
 
                     <div className="div-elementos">
 
-                        <div className="div-home-escrivaninha">
-                            
-                            
-                        </div>
+                        <div className="div-home-escrivaninha"></div>
 
                     </div>
 
