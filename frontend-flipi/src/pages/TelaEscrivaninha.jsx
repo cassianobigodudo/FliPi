@@ -3,7 +3,7 @@ import "./TelaEscrivaninha.css"
 import EstrelasBtn from '../components/EstrelasBtn'
 import NavbarVertical from '../components/NavbarVertical'
 import { GlobalContext } from '../contexts/GlobalContext'
-import {useLocation, useNavigate } from 'react-router-dom'
+
 
 
 function TelaEscrivaninha() {
@@ -27,16 +27,10 @@ function TelaEscrivaninha() {
   
   const {biblioteca, livroAcessado, setLivroAcessado} = useContext(GlobalContext)
 
-  useEffect (() => {
-    console.log(livroAcessado)
-  }, [livroAcessado.resenhasLivro[0].resenhaUsuario])
 
-  //passando o valor do textarea para o objeto
   const [resenha, setResenha] = useState('')
 
   function cadastrarResenha(){
-
-    alert(`Resenha cadastrada com sucesso!!!`)
 
   }
 
