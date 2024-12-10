@@ -3,7 +3,6 @@ import './TelaPrincipal.css'
 import { Link, useNavigate } from "react-router-dom"
 import Navbar from '../components/Navbar'
 import { GlobalContext } from '../contexts/GlobalContext'
-import { useNavigate } from 'react-router-dom'
 
 function TelaPrincipal() {
     
