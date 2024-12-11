@@ -8,6 +8,8 @@
 
 }
 
+
+
 .escrivaninha-mesa{
 
     display: flex;
@@ -207,9 +209,18 @@
 }
 
 .informacoesLivro-esquerda-capa{
-    background: linear-gradient(rgb(194, 144, 116), rgb(116, 74, 54));
+    /* background: linear-gradient(rgb(194, 144, 116), rgb(116, 74, 54)); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 65%;
     width: 95%;
+}
+
+.livro-escrivaninha{
+
+    width: 140px
+
 }
 .meio-sinopse{
     display: flex;

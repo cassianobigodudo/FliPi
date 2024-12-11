@@ -87,7 +87,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 18 } })}>
                                 
-                                    <div className="box"></div>
+                                    <div className="box-19"></div>
                                     <p className='titulos-livros'>{biblioteca[18].tituloLivro}</p>
 
                                 </button>
@@ -98,7 +98,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 19 } })}>      
 
-                                    <div className="box"></div>
+                                    <div className="box-20"></div>
                                     <p className='titulos-livros'>{biblioteca[19].tituloLivro}</p>
                                 </button>
                             </div>
@@ -119,7 +119,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 2 } })}>      
                         
-                                    <div className="box"></div>
+                                    <div className="box-br"></div>
                                     <p className='titulos-livros'>{biblioteca[2].tituloLivro}</p>
                                 </button>
                             </div>
@@ -133,7 +133,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 4 } })}>
 
-                                    <div className="box"></div>
+                                    <div className="box-bichos"></div>
                                     <p className='titulos-livros'>{biblioteca[4].tituloLivro}</p>
 
                                 </button>
@@ -144,7 +144,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 1 } })}>      
 
-                                    <div className="box"></div>
+                                    <div className="box-1"></div>
                                     <p className='titulos-livros'>{biblioteca[1].tituloLivro}</p>
                                 </button>
                             </div>
@@ -154,7 +154,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 6 } })}>
                                 
-                                    <div className="box"></div>
+                                    <div className="box-5"></div>
                                     <p className='titulos-livros'>{biblioteca[6].tituloLivro}</p>
 
                                 </button>
@@ -165,7 +165,7 @@ function LandingPage() {
                                 <button className="btn-livro-home" onClick={() => 
                                     navigate("/telalivro", { state: { index: 7 } })}>      
 
-                                    <div className="box"></div>
+                                    <div className="box-6"></div>
                                     <p className='titulos-livros'>{biblioteca[7].tituloLivro}</p>
                                 </button>
                             </div>

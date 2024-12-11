@@ -22,7 +22,7 @@ function TelaUsuarioConfigs() {
     if(usuarioLogado == false){
 
       alert('Não há usuário logado, por favor, cadastre-se ou entre na sua conta.')
-      navigate('/landingpage')
+      navigate('/')
 
     }else{
 

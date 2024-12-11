@@ -8,6 +8,8 @@
     
 }
 
+
+
 .retangulo-um{
     height: 90%;
     width: 90%;
@@ -159,34 +161,335 @@
                 align-items: center;
                 flex-direction: column;
                 background-color: #fdfaf3;
-                
+                transition: 0.3s;                
 
             }
                 .box{
                     height: 105px;
-                    width: 85px;
-                    background-color: rgb(189, 142, 142);
-                    transition: 0.3s ease;
+                    width: 100px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ;
+                    background-image: url('./images/dom_casmurro.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
                     
                 }
+
+                .box-1{
+                    height: 105px;
+                    width: 85px;
+                    /*  */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/vidas_secas.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-3{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/magico_de_oz.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-4{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/romeu-julieta.png');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-5{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/sombras_de_outubro.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-6{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/ultimo_adeus.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-7{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/culpa_estrelas.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-8{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/ilha.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-9{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/game_of_thrones.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-10{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/it.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-11{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/diario_banana.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+            
+
+                .box-12{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/brave_new_world.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-13{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/pequeno_principe.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-14{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/da_vinci.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-15{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/1984.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+                .box-16{
+                    height: 105px;
+                    width: 85px;
+                    /* background-color: rgb(189, 142, 142); */
+                    display: flex;
+                    align-items: center;
+                    padding-top: 100px;
+                    transition: 0.3s ease;
+                    background-image: url('./images/cem_anos.jpg');
+                    /* background-position: 50%;
+                    background-size: 130%; */
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    
+                }
+
+
 
                 .div-Fila-livros:hover .div-box-titulo{
                     filter: blur(5px);
                     opacity: 0.9;
+                    transition: 0.3s;
+                    margin-bottom: 10px;
                     background-color: #dfdcd9;
+                    
 
                 }
 
                 .div-Fila-livros .div-box-titulo:hover{
                     filter: none;
                     opacity: 1;
-                    background-color: rgb(189, 142, 142);
+                    /* background-color: #cb9375; */
+                    transition: 0.3s;
                 }
+
+                /* .img-livro{
+
+                    width: 110px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 100px;
+                    margin-left: px;
+                    
+                
+                }
+                 */
 
                 .titulos-livros{
                  text-align: center;
                  margin-top: 6px;
                  font-size: 14px;
+                 transition: 0.3s;
                 
                 }
 

@@ -86,7 +86,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 1 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-1"></div>
                                         <p className='titulos-livros'>{biblioteca[1].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -95,7 +95,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 5 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-3"></div>
                                         <p className='titulos-livros'>{biblioteca[5].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -104,7 +104,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 3 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-4"></div>
                                         <p className='titulos-livros'>{biblioteca[3].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -117,7 +117,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 6 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-5"></div>
                                         <p className='titulos-livros'>{biblioteca[6].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -126,7 +126,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 7 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-6"></div>
                                         <p className='titulos-livros'>{biblioteca[7].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -135,7 +135,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 8 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-7"></div>
                                         <p className='titulos-livros'>{biblioteca[8].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -144,7 +144,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 9 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-8"></div>
                                         <p className='titulos-livros'>{biblioteca[9].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -174,7 +174,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 10 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-9"></div>
                                         <p className='titulos-livros'>{biblioteca[10].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -183,7 +183,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 11 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-10"></div>
                                         <p className='titulos-livros'>{biblioteca[11].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -192,7 +192,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 12 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-11"></div>
                                         <p className='titulos-livros'>{biblioteca[12].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -201,7 +201,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 13 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-12"></div>
                                         <p className='titulos-livros'>{biblioteca[13].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -214,7 +214,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 14 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-13"></div>
                                         <p className='titulos-livros'>{biblioteca[14].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -223,7 +223,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 15 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-14"></div>
                                         <p className='titulos-livros'>{biblioteca[15].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -232,7 +232,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 16 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-15"></div>
                                         <p className='titulos-livros'>{biblioteca[16].tituloLivro}</p>
                                     </button>
                                 </div>
@@ -241,7 +241,7 @@ function TelaPrincipal() {
                                     <button className="btn-livro-home" onClick={() => 
                                         navigate("/telalivro", { state: { index: 17 } })}>
     
-                                        <div className="box"></div>
+                                        <div className="box-16"></div>
                                         <p className='titulos-livros'>{biblioteca[17].tituloLivro}</p>
                                     </button>
                                 </div>

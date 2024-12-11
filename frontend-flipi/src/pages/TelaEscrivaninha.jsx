@@ -16,7 +16,7 @@ function TelaEscrivaninha() {
     if(usuarioLogado == false){
 
       alert('Não há usuário logado, por favor, cadastre-se ou entre na sua conta.')
-      navigate('/landingpage')
+      navigate('/')
     }
 
   }, [])
@@ -136,6 +136,7 @@ function TelaEscrivaninha() {
             <div className="informacoesLivro-esquerda">
 
                 <div className="informacoesLivro-esquerda-capa">
+                <img className='livro-escrivaninha' src={livroAcessado.capaLivro} alt="" />
                 
                 </div>
 

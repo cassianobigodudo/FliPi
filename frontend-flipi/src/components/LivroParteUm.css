@@ -41,8 +41,8 @@
             border-radius: 5px;
         }
             .imagem-capa-livro{
-                height: 80vh;
-                width:65vh;
+                /* height: 80vh; */
+                width:36vh;
             }
         .parte-classificacao{ 
             display: flex;
